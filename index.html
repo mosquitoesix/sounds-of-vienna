@@ -15,8 +15,7 @@
 <body>
 <!-- the header-->
   <header>
-        <h1 style="font-size:36px">DAY6 Members Hometown</h1>
-        <p><img src="myday.jpg" alt="My Day" width="200" height="200"></img></p>
+        <h1 style="font-size:36px">Sounds of Vienna</h1>
   </header>
 <!-- the main box contains 2 maps-->
   <main>
@@ -31,35 +30,27 @@
     <!--map-->
     <script>
     
-    let map = L.map('map').setView([36.6383920, 127.6961188], 6);
+    let map = L.map('map').setView([48.225, 16.349], 6);
     
     let layer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
     });
     layer.addTo(map);
 
-    //rectangle as bounding box
-    let bounds = [[38.775784100489005, 123.74625819206847], [32.22827902152603, 130.98313215977495]]; 
-    let rect = L.rectangle(bounds, {
-    color: "#4C9AB0ff", 
-    fill: false,
-    weight: 3
-    });
-    rect.addTo(map).bindPopup('<p><b>DAY6\'s Homecountry:</b></p><p>South Korea</p>');
 
-    //markers with pop up for Sungjin
-    let sjIcon = L.icon ({
-          iconUrl: 'marker_sj.png',
+    //markers with pop up for Währinger Straße - Volksoper
+    let WSIcon = L.icon ({
+          iconUrl: 'marker.png',
           iconSize: [26, 45],
           iconAnchor: [13, 45],
           popupAnchor:  [0, -45]
     });
-    let sjpos = [35.17685310580616, 129.0286700677613];
-    let sjmarker = L.marker(sjpos, {
-    title: "Sungjin's Hometown",
-    icon: sjIcon});
+    let WSpos = [48.225, 16.349];
+    let WSmarker = L.marker(WSpos, {
+    title: "Währinger Straße - Volksoper",
+    icon: WSIcon});
     
-    sjmarker.addTo(map).bindPopup('<p><b>Sungjin\'s Hometown:</b></p><p>Busan, South Korea</p><img src="member_sungjin_1.jpg" style="width: 100px; height: 150px;"></img>');
+    WSmarker.addTo(map).bindPopup('<p><b>Währinger Straße - Volksoper</b></p><audio src="<"https://drive.google.com/file/d/1zu0kCj3otKZJ_KZSbwOEPlHjen6Cheur/view?usp=sharing">" controls ></audio>');
 
     //markers with pop up for Jae
     let jIcon = L.icon ({
