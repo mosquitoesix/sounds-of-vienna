@@ -27,7 +27,7 @@ html {
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     align-items: center;
-    height: 300px;
+    height: auto;
     font-weight: bold;
     text-shadow: 2px 2px 5px #ffffff;
     opacity: 0.9;
