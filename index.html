@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DAY6 Members Hometown</title>
+<!-- link below is for the html title icons-->
+<link rel="icon" href="afifah_html_icon_myday.jpg" sizes="128x128" type="image/png">
+<!-- link below is for the html style-->
+<link rel="stylesheet" href="afifah_style.css"/>
+<!-- link below is for the map leaflet-->
+<link rel="stylesheet" href="http://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="http://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+<!-- the header-->
+  <header>
+        <h1 style="font-size:36px">DAY6 Members Hometown</h1>
+        <p><img src="myday.jpg" alt="My Day" width="200" height="200"></img></p>
+  </header>
+<!-- the main box contains 2 maps-->
+  <main>
+      <h1>DAY6 Members Hometown</h1>
+
+      <h2>&#128312 Members of DAY6:</h2>
+      <li>Sungjin &#128059</li>
+      <li>Jae &#128036</li>
+      <li>YoungK &#129418</li>
+      <li>Wonpil &#128048</li>
+      <li>Dowoon &#128054</li>
+
+      <h2>&#128312 Highlight of this page:</h2>
+      <h3>Overall:</h3>
+      <li>The title icon style of this page</li>
+      <li>The style of font in the header</li>
+      <li>The markers are designed by myself and take the pictures from <a href="https://twitter.com/weketa/status/1385267498128318466">here</a></li>
+      <h3>The first map:</h3>
+      <li>Map is centralized in CSS with calculation</li>
+      <li>The style of Map: border radius, border width, border color, border line</li>
+      <li>The symbolization of points used title for each</li>
+      <li>The border for South Korea with the rectangle styled in CSS</li>
+      <li>The legends of map</li>
+      <h3>The second map:</h3>
+      <li>Map is centralized in CSS with calculation</li>
+      <li>The style of Map: border radius, border width, border color, border line</li>
+      <li>Customized pop up with image</li>
+
+<!--manual maps with 5 markers-->
+      <h2>Map of DAY6 Members Hometown in South Korea</h2>
+
+    <!--map-->
+<div class="map">
+    <div class="southkorea" style="top: 20%; left: 25%;"></div>
+    <div title="Sungjin's Hometown: Busan" class="markersj" style="top: 58%; left: 49%;"></div>
+    <div title="Jae's Hometown: Seoul" class="markerj" style="top: 40%; left: 40%;"></div>
+    <div title="YoungK's Hometown: Ilsan" class="markeryk" style="top: 34%; left: 38.5%;"></div>
+    <div title="Wonpil's Hometown: Incheon" class="markerwp" style="top: 42%; left: 36%;"></div>
+    <div title="Dowoon's Hometown: Busan" class="markerdw" style="top: 58%; left: 48%;"></div>
+</div>
+
+    <!--legends-->  
+    <h3>Legends</h3>
+    <p><img title="Sungjin's Hometown: Busan" src="marker_sj.png" width="13" height="22.5"></img> Sungjin's Hometown</p>
+    <p><img title="Jae's Hometown: Seoul" src="marker_j.png" width="13" height="22.5"></img> Jae's Hometown</p>
+    <p><img title="YoungK's Hometown: Ilsan" src="marker_yk.png" width="13" height="22.5"></img> YoungK's Hometown</p>
+    <p><img title="Wonpil's Hometown: Incheon" src="marker_dw.png" width="13" height="22.5"></img> Wonpil's Hometown</p>
+    <p><img title="Dowoon's Hometown: Busan" src="marker_dw.png" width="13" height="22.5"></img> Dowoon's Hometown</p>
+
+<!--leaflet with 5 markers-->
+    <h2>Do you want to look closer?</h2>
+    <h3>Zoom and Pan the map!</h3>
+
+    <div id="map">
+    </div>
+    
+    <!--map-->
+    <script>
+    
+    let map = L.map('map').setView([36.6383920, 127.6961188], 6);
+    
+    let layer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+    });
+    layer.addTo(map);
+
+    //rectangle as bounding box
+    let bounds = [[38.775784100489005, 123.74625819206847], [32.22827902152603, 130.98313215977495]]; 
+    let rect = L.rectangle(bounds, {
+    color: "#4C9AB0ff", 
+    fill: false,
+    weight: 3
+    });
+    rect.addTo(map).bindPopup('<p><b>DAY6\'s Homecountry:</b></p><p>South Korea</p>');
+
+    //markers with pop up for Sungjin
+    let sjIcon = L.icon ({
+          iconUrl: 'marker_sj.png',
+          iconSize: [26, 45],
+          iconAnchor: [13, 45],
+          popupAnchor:  [0, -45]
+    });
+    let sjpos = [35.17685310580616, 129.0286700677613];
+    let sjmarker = L.marker(sjpos, {
+    title: "Sungjin's Hometown",
+    icon: sjIcon});
+    
+    sjmarker.addTo(map).bindPopup('<p><b>Sungjin\'s Hometown:</b></p><p>Busan, South Korea</p><img src="member_sungjin_1.jpg" style="width: 100px; height: 150px;"></img>');
+
+    //markers with pop up for Jae
+    let jIcon = L.icon ({
+        iconUrl: 'marker_j.png',
+        iconSize: [26, 45],
+        iconAnchor: [13, 45],
+        popupAnchor:  [0, -45]
+    });
+    let jpos = [37.35919591880446, 127.15716767497335];
+    let jmarker = L.marker(jpos, {
+    title: "Jae's Hometown",
+    icon: jIcon});
+    
+    jmarker.addTo(map).bindPopup('<p><b>Jae\'s Hometown:</b></p><p>Seoul, South Korea</p><img src="member_jae_1.jpg" style="width: 100px; height: 150px;"></img>');
+
+    //markers with pop up for YoungK
+    let ykIcon = L.icon ({
+        iconUrl: 'marker_yk.png',
+        iconSize: [26, 45],
+        iconAnchor: [13, 45],
+        popupAnchor:  [0, -45]
+    });
+    let ykpos = [37.68750875461919, 126.80300809901203];
+    let ykmarker = L.marker(ykpos, {
+    title: "YoungK's Hometown",
+    icon: ykIcon});
+    
+    ykmarker.addTo(map).bindPopup('<p><b>YoungK\'s Hometown:</b></p><p>Ilsan, South Korea</p><img src="member_youngk_1.jpg" style="width: 100px; height: 150px;"></img>');
+
+    //markers with pop up for Wonpil
+    let wpIcon = L.icon ({
+        iconUrl: 'marker_wp.png',
+        iconSize: [26, 45],
+        iconAnchor: [13, 45],
+        popupAnchor:  [0, -45]
+    });
+    let wppos = [36.82628999484975, 126.41412995692978];
+    let wpmarker = L.marker(wppos, {
+    title: "Wonpil's Hometown",
+    icon: wpIcon});
+    
+    wpmarker.addTo(map).bindPopup('<p><b>Wonpil\'s Hometown:</b></p><p>Incheon, South Korea</p><img src="member_wonpil_.jpg" style="width: 100px; height: 150px;"></img>');
+
+    //markers with pop up for Dowoon
+    let dwIcon = L.icon ({
+        iconUrl: 'marker_dw.png',
+        iconSize: [26, 45],
+        iconAnchor: [13, 45],
+        popupAnchor:  [0, -45]
+    });
+    let dwpos = [35.14548028832448, 128.75930051240937];
+    let dwmarker = L.marker(dwpos, {
+    title: "Dowoon's Hometown",
+    icon: dwIcon});
+    
+    dwmarker.addTo(map).bindPopup('<p><b>Dowoon\'s Hometown:</b></p><p>Busan, South Korea</p><img src="member_dowoon_1.jpg" style="width: 100px; height: 150px;"></img>');
+
+    </script>
+
+  </main>
+  
+<footer>
+This assignment designed by: Zulfa Nur'aini 'Afifah (12042429)
+<img src="02-tuwien_logo.png" alt="TU Wien Logo" width="10" height="10"></img>
+</footer>
+
+
+
+</body>
+</html>
