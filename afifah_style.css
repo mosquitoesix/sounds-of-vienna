@@ -24,7 +24,7 @@ html {
     padding: 10px;
     min-height: 35px;
     border-radius: 5px;
-    background-color: #6EB5CBff;
+    text-color: #6EB5CBff;
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     align-items: center;
@@ -39,7 +39,6 @@ html {
   main {
     flex: 0;
     font-size: 14px;
-    background-color: #6EB5CBff;
     margin-bottom: 10px;
     padding: 10px;
     min-height: 35px;
@@ -135,23 +134,10 @@ html {
   width: 90%;
   height: 75%;
   left: 5%;
-  bottom: 30px;
+  bottom: 0;
   border-style: groove;
   border-radius: 5px;
   border-width: 5px;
   border-color: #296B75ff
 }
 
-  /* the footer of all pages */
-  
-  footer {
-    margin-top: 2.5px;
-    padding: 4px;
-    min-height: 20px;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    align-items: center;
-    opacity: 0.8;
-  }
-  
