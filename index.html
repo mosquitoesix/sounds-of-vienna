@@ -52,68 +52,154 @@
     
     WSmarker.addTo(map).bindPopup('<p><b>Währinger Straße - Volksoper</b></p><audio src="WaehringerStrVolksoper_SubwayStation_4pm_thursday.aac" controls ></audio>');
 
-    //markers with pop up for Jae
-    let jIcon = L.icon ({
-        iconUrl: 'marker_j.png',
-        iconSize: [26, 45],
-        iconAnchor: [13, 45],
-        popupAnchor:  [0, -45]
+    //markers with pop up for Votivkirche
+    let VKIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
     });
-    let jpos = [37.35919591880446, 127.15716767497335];
-    let jmarker = L.marker(jpos, {
-    title: "Jae's Hometown",
-    icon: jIcon});
+    let VKpos = [48.21527961, 16.35965072];
+    let VKmarker = L.marker(VKpos, {
+    title: "Votivkirche",
+    icon: VKIcon});
     
-    jmarker.addTo(map).bindPopup('<p><b>Jae\'s Hometown:</b></p><p>Seoul, South Korea</p><img src="member_jae_1.jpg" style="width: 100px; height: 150px;"></img>');
-
-    //markers with pop up for YoungK
-    let ykIcon = L.icon ({
-        iconUrl: 'marker_yk.png',
-        iconSize: [26, 45],
-        iconAnchor: [13, 45],
-        popupAnchor:  [0, -45]
+    VKmarker.addTo(map).bindPopup('<p><b>Votivkirche</b></p><audio src="Votivkirche_2021-06-15_14-26-44 (online-audio-converter.com).mp3" controls ></audio>');
+    
+    //markers with pop up for Stadtpark
+    let SPIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
     });
-    let ykpos = [37.68750875461919, 126.80300809901203];
-    let ykmarker = L.marker(ykpos, {
-    title: "YoungK's Hometown",
-    icon: ykIcon});
+    let SPpos = [48.20250577, 16.37902856];
+    let SPmarker = L.marker(SPpos, {
+    title: "Stadtpark",
+    icon: SPIcon});
     
-    ykmarker.addTo(map).bindPopup('<p><b>YoungK\'s Hometown:</b></p><p>Ilsan, South Korea</p><img src="member_youngk_1.jpg" style="width: 100px; height: 150px;"></img>');
-
-    //markers with pop up for Wonpil
-    let wpIcon = L.icon ({
-        iconUrl: 'marker_wp.png',
-        iconSize: [26, 45],
-        iconAnchor: [13, 45],
-        popupAnchor:  [0, -45]
+    SPmarker.addTo(map).bindPopup('<p><b>Stadtpark</b></p><audio src="Stadtpark-4-20pm-thursday.aac" controls ></audio>');
+       
+    //markers with pop up for Schottentor U-bahn Station
+    let SCIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
     });
-    let wppos = [36.82628999484975, 126.41412995692978];
-    let wpmarker = L.marker(wppos, {
-    title: "Wonpil's Hometown",
-    icon: wpIcon});
+    let SCpos = [48.21378035, 16.36292483];
+    let SCmarker = L.marker(SCpos, {
+    title: "Schottentor U-bahn Station",
+    icon: SCIcon});
     
-    wpmarker.addTo(map).bindPopup('<p><b>Wonpil\'s Hometown:</b></p><p>Incheon, South Korea</p><img src="member_wonpil_.jpg" style="width: 100px; height: 150px;"></img>');
-
-    //markers with pop up for Dowoon
-    let dwIcon = L.icon ({
-        iconUrl: 'marker_dw.png',
-        iconSize: [26, 45],
-        iconAnchor: [13, 45],
-        popupAnchor:  [0, -45]
+    SCmarker.addTo(map).bindPopup('<p><b>Schottentor U-bahn Station</b></p><audio src="Schottentor Station_2021-06-15_14-27-15 (online-audio-converter.com).mp3" controls ></audio>');
+      
+      
+    //markers with pop up for Oper, Karlsplatz U-bahn Station
+    let OKIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
     });
-    let dwpos = [35.14548028832448, 128.75930051240937];
-    let dwmarker = L.marker(dwpos, {
-    title: "Dowoon's Hometown",
-    icon: dwIcon});
+    let OKpos = [48.21378035, 16.36292483];
+    let OKmarker = L.marker(OKpos, {
+    title: "Oper, Karlsplatz U-bahn Station",
+    icon: OKIcon});
     
-    dwmarker.addTo(map).bindPopup('<p><b>Dowoon\'s Hometown:</b></p><p>Busan, South Korea</p><img src="member_dowoon_1.jpg" style="width: 100px; height: 150px;"></img>');
+    OKmarker.addTo(map).bindPopup('<p><b>Oper, Karlsplatz U-bahn Station</b></p><audio src="Oper, Karlplatz Tram Station_2021-06-15_14-27-40 (online-audio-converter.com).mp3" controls ></audio>');
+    
 
+    //markers with pop up for Aumannplatz U-bahn Station
+    let APIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
+    });
+    let APpos = [48.22848268, 16.33628387];
+    let APmarker = L.marker(APpos, {
+    title: "Aumannplatz U-bahn Station",
+    icon: APIcon});
+    
+    APmarker.addTo(map).bindPopup('<p><b>Aumannplatz U-bahn Station</b></p><audio src="on-Tram-41-Aumannplatz-3-50pm-thursday.aac" controls ></audio>');
+      
+    //markers with pop up for Wiener Konzerthaus
+    let WKIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
+    });
+    let WKpos = [48.20089871, 16.37735106];
+    let WKmarker = L.marker(WKpos, {
+    title: "Wiener Konzerthaus",
+    icon: WKIcon});
+    
+    WKmarker.addTo(map).bindPopup('<p><b>Wiener Konzerthaus</b></p><audio src="konzerthaus_120621_1900.mp3" controls ></audio>');
+            
+    //markers with pop up for Karlsplatz
+    let KIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
+    });
+    let Kpos = [48.19981143, 16.37111051];
+    let Kmarker = L.marker(Kpos, {
+    title: "Karlsplatz",
+    icon: KIcon});
+    
+    Kmarker.addTo(map).bindPopup('<p><b>Karlsplatz</b></p><audio src="karlsplatz_130621_1000.mp3" controls ></audio>');
+                  
+    //markers with pop up for Gersthof U-bahn Station
+    let GSIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
+    });
+    let GSpos = [48.23161722, 16.32899333];
+    let GSmarker = L.marker(GSpos, {
+    title: "Gersthof U-bahn Station",
+    icon: GSIcon});
+    
+    GSmarker.addTo(map).bindPopup('<p><b>Gersthof U-bahn Station</b></p><audio src="Gersthof-3-50pm-thursday.aac" controls ></audio>');
+                        
+    //markers with pop up for Donauinsel
+    let DIIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
+    });
+    let DIpos = [48.21069642, 16.43495513];
+    let DImarker = L.marker(DIpos, {
+    title: "Donauinsel",
+    icon: DIIcon});
+    
+    DImarker.addTo(map).bindPopup('<p><b>Donauinsel</b></p><audio src="donauinsel_110621_1200.mp3" controls ></audio>');
+                         
+    //markers with pop up for Albertina Museum
+    let AMIcon = L.icon ({
+          iconUrl: 'marker.png',
+          iconSize: [22, 45],
+          iconAnchor: [11, 45],
+          popupAnchor:  [0, -45]
+    });
+    let AMpos = [48.20469916, 16.36817167];
+    let AMmarker = L.marker(AMpos, {
+    title: "Albertina Museum",
+    icon: AMIcon});
+    
+    AMmarker.addTo(map).bindPopup('<p><b>Albertina Museum</b></p><audio src="Albertina Museum_2021-06-15_14-26-07 (online-audio-converter.com).mp3" controls ></audio>');
+      
     </script>
 
   </main>
   
 <footer>
-This assignment designed by: Zulfa Nur'aini 'Afifah (12042429)
+Multimedia Group of Camilo, Jiao, Valerian, Zulfa
 <img src="02-tuwien_logo.png" alt="TU Wien Logo" width="10" height="10"></img>
 </footer>
 
