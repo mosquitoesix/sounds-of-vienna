@@ -131,9 +131,11 @@ html {
 } 
 /* the second map: leaflet */
 #map {
+  position: absolute;
   width: 90%;
   height: 90%;
   left: 5%;
+  bottom: 0;
   border-style: groove;
   border-radius: 5px;
   border-width: 5px;
