@@ -133,9 +133,9 @@ html {
 #map {
   position: absolute;
   width: 90%;
-  height: 90%;
+  height: 75%;
   left: 5%;
-  bottom: 0;
+  bottom: 30px;
   border-style: groove;
   border-radius: 5px;
   border-width: 5px;
