@@ -8,6 +8,7 @@ html {
   
   /* the body of html */
   body {
+    height: inherit;
     margin: 0;
     padding: 0;
   }
