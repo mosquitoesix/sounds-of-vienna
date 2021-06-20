@@ -1,6 +1,7 @@
 
 /* whole html */
 html {
+    width: 100%;
     font-family:'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 13px;
   }
